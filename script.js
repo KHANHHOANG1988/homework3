@@ -14,15 +14,14 @@ function generatePassword() {
   var userCriteria = [];
 
   var passwordLength = prompt("Please enter any number between 8 and 128 for the password length")
-  passwordLength = isNaN(passwordLength)
+  passwordLength = parseInt(passwordLength)
  
-  if (passwordLength < 8 || passwordLength > 128 ) {
+  if (passwordLength < 8 || passwordLength > 128 || passwordLength === ""){
     alert("Please enter any number between 8 and 128")
     return ("Try again!")
   }
 
-  else
-
+   else
     var charTypes = ["lowercase", "uppercase", "numeric", "special characters"];
 
   var charTypesConfirms = [];
